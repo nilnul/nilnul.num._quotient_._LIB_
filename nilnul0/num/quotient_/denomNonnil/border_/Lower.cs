@@ -9,7 +9,7 @@ namespace nilnul.num.quotient_.denomNonnil.border_
 {
 	public class Lower : Border
 	{
-		public Lower(bool openFalseCloseTrue, Quotient_NonnilDenom bound) : base(openFalseCloseTrue, bound)
+		public Lower(bool openFalseCloseTrue, DenomNonnil bound) : base(openFalseCloseTrue, bound)
 		{
 		}
 

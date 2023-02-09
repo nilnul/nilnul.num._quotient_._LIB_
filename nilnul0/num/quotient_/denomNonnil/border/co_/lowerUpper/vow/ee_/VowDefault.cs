@@ -9,9 +9,9 @@ namespace nilnul.num.quotient_.denomNonnil.border.co_.lowerUpper.vow.ee_
 	public class VowDefault<TVow>
 		:
 		Ee
-		where TVow : obj.VowI_ofIn<LowerUpper>, new()
+		where TVow : obj.VowI_ofIn<LowerUpperI>, new()
 	{
-		public VowDefault(in LowerUpper val)
+		public VowDefault(in LowerUpperI val)
 			:
 		base(
 			in val
@@ -22,7 +22,7 @@ namespace nilnul.num.quotient_.denomNonnil.border.co_.lowerUpper.vow.ee_
 		)
 		{
 		}
-		public VowDefault( LowerUpper val)
+		public VowDefault( LowerUpperI val)
 			:
 		this(
 			in val

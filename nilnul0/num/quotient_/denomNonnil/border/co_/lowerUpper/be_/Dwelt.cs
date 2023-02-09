@@ -8,9 +8,9 @@ namespace nilnul.num.quotient_.denomNonnil.border.co_.lowerUpper.be_
 {
 	public class Dwelt : lowerUpper.BeA
 	{
-		public override bool be(in LowerUpper obj)
+		public override bool be(in LowerUpperI obj)
 		{
-			return Spanned.Singleton.be(in obj) || Single.Singleton.be(in obj);
+			return Spanned.Singleton.be(in obj) || Singlular.Singleton.be(in obj);
 		}
 
 		static public Dwelt Singleton

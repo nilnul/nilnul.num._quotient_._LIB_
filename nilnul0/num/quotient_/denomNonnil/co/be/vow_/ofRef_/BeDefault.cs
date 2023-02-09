@@ -10,7 +10,7 @@ namespace nilnul.num.quotient_.denomNonnil.co.be.vow_.ofRef_
 	public class BeDefault<TBe>
 		:
 		OfRef
-		where TBe:nilnul.obj.BeOfRefI<(Quotient_NonnilDenom, Quotient_NonnilDenom)>,new()
+		where TBe:nilnul.obj.BeOfRefI<(DenomNonnil, DenomNonnil)>,new()
 	{
 		
 		public BeDefault() : base(

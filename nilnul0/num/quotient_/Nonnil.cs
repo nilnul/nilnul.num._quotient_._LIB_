@@ -9,6 +9,9 @@ using nilnul.num_;
 
 namespace nilnul.num.quotient_
 {
+	/// <summary>
+	/// of simplified;
+	/// </summary>
 	public class Nonnil1 :
 		
 		nilnul.num.quotient.be_.nonnil.vow.En

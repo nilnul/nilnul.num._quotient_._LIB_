@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using Q1 = nilnul.num.Quotient_NonnilDenom;
+using Q1 = nilnul.num.quotient_.DenomNonnilI;
 
 namespace nilnul.num.quotient_.denomNonnil.be_
 {
@@ -13,12 +13,9 @@ namespace nilnul.num.quotient_.denomNonnil.be_
 
 	{
 
-	
-
-		public override bool be(in Quotient_NonnilDenom obj)
+		public override bool be(in DenomNonnilI obj)
 		{
-			return obj.bePositive;
-			//throw new NotImplementedException();
+			return obj.numerator==0 || Positive.Singleton.be(obj);
 		}
 
 
@@ -29,23 +26,5 @@ namespace nilnul.num.quotient_.denomNonnil.be_
 				return nilnul._obj.typ_.nilable_.unprimable_.Singleton<Nonneg>.Instance;
 			}
 		}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 	}
-
-
-
 }

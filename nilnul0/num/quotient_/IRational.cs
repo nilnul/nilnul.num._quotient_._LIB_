@@ -8,6 +8,8 @@ namespace nilnul.num.quotient_
 {
 	public interface IRational
 		:nilnul.num.IQuotient
+		,
+		quotient_.frac_.IRational
 	{
 	}
 }

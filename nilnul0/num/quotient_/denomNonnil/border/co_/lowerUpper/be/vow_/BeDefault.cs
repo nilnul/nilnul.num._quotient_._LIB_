@@ -10,7 +10,7 @@ namespace nilnul.num.quotient_.denomNonnil.border.co_.lowerUpper.be.vow_
 	public class BeDefault<TBe>
 		:
 		Vow
-		where TBe: nilnul.obj.BeI_ofIn<LowerUpper>,new()
+		where TBe: nilnul.obj.BeI_ofIn<LowerUpperI>,new()
 	{
 		public BeDefault() : base(
 

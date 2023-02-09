@@ -9,15 +9,15 @@ namespace nilnul.num.quotient_.denomNonnil.border.co_.lowerUpper.be
 {
 	public class Vow
 		:
-		nilnul.obj.be.Vow_ofIn<LowerUpper>
+		nilnul.obj.be.Vow_ofIn<LowerUpperI>
 		,
 		lowerUpper.VowI
 	{
-		public Vow(in BeI_ofIn<LowerUpper> val) : base(in val)
+		public Vow(in BeI_ofIn<LowerUpperI> val) : base(in val)
 		{
 		}
 
-		public Vow(BeI_ofIn<LowerUpper> x) : base(x)
+		public Vow(BeI_ofIn<LowerUpperI> x) : base(x)
 		{
 		}
 	}

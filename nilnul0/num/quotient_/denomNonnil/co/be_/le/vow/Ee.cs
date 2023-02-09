@@ -12,15 +12,15 @@ namespace nilnul.num.quotient_.denomNonnil.co.be_.le.vow
 			Vow
 		>
 	{
-		public Ee(in (Quotient_NonnilDenom, Quotient_NonnilDenom) val) : base(in val)
+		public Ee(in (DenomNonnil, DenomNonnil) val) : base(in val)
 		{
 		}
 
-		public Ee((Quotient_NonnilDenom, Quotient_NonnilDenom) val) : base(val)
+		public Ee((DenomNonnil, DenomNonnil) val) : base(val)
 		{
 		}
 
-		public Ee(Quotient_NonnilDenom x, Quotient_NonnilDenom y) : base(x, y)
+		public Ee(DenomNonnil x, DenomNonnil y) : base(x, y)
 		{
 		}
 	}

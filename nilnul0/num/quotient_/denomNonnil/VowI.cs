@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace nilnul.num.quotient_.denomNonnil
 {
 	public interface VowI:
-		nilnul.obj.VowI_ofIn< nilnul.num.Quotient_NonnilDenom>
+		nilnul.obj.VowI_ofIn< nilnul.num.quotient_.DenomNonnilI>
 	{
 
 	}

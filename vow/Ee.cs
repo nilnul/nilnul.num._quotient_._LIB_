@@ -8,6 +8,11 @@ using Q1 = nilnul.num.Quotient1;
 
 namespace nilnul.num.quotient.vow
 {
+	/// <summary>
+	/// 
+	/// </summary>
+	/// <typeparam name="TVow"></typeparam>
+	/// <seealso cref="Ee_nonnilDenom{TVow}"/>
 	public class Ee<TVow> :
 		nilnul.obj.vow.Ee1<QuotientI1, TVow>
 		where TVow : nilnul.obj.VowI2<QuotientI1>
@@ -19,6 +24,9 @@ namespace nilnul.num.quotient.vow
 
 	}
 
+	/// <summary>
+	/// <see cref="Ee_nonnilDenom"/>
+	/// </summary>
 	public class Ee :
 		Ee< nilnul.obj.VowI2<QuotientI1>>
 	{

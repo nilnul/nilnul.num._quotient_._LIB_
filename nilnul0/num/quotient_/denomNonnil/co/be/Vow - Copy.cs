@@ -10,14 +10,14 @@ namespace nilnul.num.quotient_.denomNonnil.co.be
 	public class Vow
 		:
 		nilnul.obj.co.be.vow_.OfIn<
-			Quotient_NonnilDenom
+			DenomNonnil
 		>
 	{
-		public Vow(in obj.BeI_ofIn<(Quotient_NonnilDenom, Quotient_NonnilDenom)> val) : base(in val)
+		public Vow(in obj.BeI_ofIn<(DenomNonnil, DenomNonnil)> val) : base(in val)
 		{
 		}
 
-		public Vow(BeI_ofIn<(Quotient_NonnilDenom, Quotient_NonnilDenom)> x) : base(x)
+		public Vow(BeI_ofIn<(DenomNonnil, DenomNonnil)> x) : base(x)
 		{
 		}
 	}

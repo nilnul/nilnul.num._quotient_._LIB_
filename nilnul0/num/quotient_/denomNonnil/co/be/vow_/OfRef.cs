@@ -10,14 +10,14 @@ namespace nilnul.num.quotient_.denomNonnil.co.be.vow_
 	public class OfRef
 		:
 		nilnul.obj.co.be.Vow<
-			Quotient_NonnilDenom
+			DenomNonnil
 		>
 	{
-		public OfRef(ref BeOfRefI<(Quotient_NonnilDenom, Quotient_NonnilDenom)> val) : base(ref val)
+		public OfRef(ref BeOfRefI<(DenomNonnil, DenomNonnil)> val) : base(ref val)
 		{
 		}
 
-		public OfRef(BeOfRefI<(Quotient_NonnilDenom, Quotient_NonnilDenom)> x) : base(x)
+		public OfRef(BeOfRefI<(DenomNonnil, DenomNonnil)> x) : base(x)
 		{
 		}
 	}

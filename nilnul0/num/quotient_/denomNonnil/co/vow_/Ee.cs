@@ -9,29 +9,29 @@ namespace nilnul.num.quotient_.denomNonnil.co.vow
 {
 	public class Ee
 		:
-		nilnul.obj.co.vow_.ofIn.Ee<Quotient_NonnilDenom>
+		nilnul.obj.co.vow_.ofIn.Ee<DenomNonnil>
 	{
-		public Ee(in (Quotient_NonnilDenom, Quotient_NonnilDenom) val, obj.VowI_ofIn<(Quotient_NonnilDenom, Quotient_NonnilDenom)> vow) : base(in val, vow)
+		public Ee(in (DenomNonnil, DenomNonnil) val, obj.VowI_ofIn<(DenomNonnil, DenomNonnil)> vow) : base(in val, vow)
 		{
 		}
 
-		public Ee(in (Quotient_NonnilDenom, Quotient_NonnilDenom) val, in VowI_ofIn<(Quotient_NonnilDenom, Quotient_NonnilDenom)> vow) : base(in val, in vow)
+		public Ee(in (DenomNonnil, DenomNonnil) val, in VowI_ofIn<(DenomNonnil, DenomNonnil)> vow) : base(in val, in vow)
 		{
 		}
 
-		public Ee((Quotient_NonnilDenom, Quotient_NonnilDenom) val, in VowI_ofIn<(Quotient_NonnilDenom, Quotient_NonnilDenom)> vow) : base(val, in vow)
+		public Ee((DenomNonnil, DenomNonnil) val, in VowI_ofIn<(DenomNonnil, DenomNonnil)> vow) : base(val, in vow)
 		{
 		}
 
-		public Ee((Quotient_NonnilDenom, Quotient_NonnilDenom) val, VowI_ofIn<(Quotient_NonnilDenom, Quotient_NonnilDenom)> vow) : base(val, vow)
+		public Ee((DenomNonnil, DenomNonnil) val, VowI_ofIn<(DenomNonnil, DenomNonnil)> vow) : base(val, vow)
 		{
 		}
 
-		public Ee(Quotient_NonnilDenom x, Quotient_NonnilDenom y, in VowI_ofIn<(Quotient_NonnilDenom, Quotient_NonnilDenom)> vow) : base(x, y, in vow)
+		public Ee(DenomNonnil x, DenomNonnil y, in VowI_ofIn<(DenomNonnil, DenomNonnil)> vow) : base(x, y, in vow)
 		{
 		}
 
-		public Ee(Quotient_NonnilDenom x, Quotient_NonnilDenom y, VowI_ofIn<(Quotient_NonnilDenom, Quotient_NonnilDenom)> vow) : base(x, y, vow)
+		public Ee(DenomNonnil x, DenomNonnil y, VowI_ofIn<(DenomNonnil, DenomNonnil)> vow) : base(x, y, vow)
 		{
 		}
 	}

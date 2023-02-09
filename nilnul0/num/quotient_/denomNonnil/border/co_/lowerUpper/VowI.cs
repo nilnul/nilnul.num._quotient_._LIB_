@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace nilnul.num.quotient_.denomNonnil.border.co_.lowerUpper
 {
 	public interface VowI
-		:nilnul.obj.VowI_ofIn< LowerUpper>
+		:nilnul.obj.VowI_ofIn< LowerUpperI>
 	{
 	}
 }

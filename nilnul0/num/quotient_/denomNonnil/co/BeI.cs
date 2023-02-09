@@ -10,7 +10,7 @@ namespace nilnul.num.quotient_.denomNonnil.co
 		:
 		
 		nilnul.obj.co.be_.OfInI<
-			num.Quotient_NonnilDenom
+			num.quotient_.DenomNonnil
 		>
 	{
 		

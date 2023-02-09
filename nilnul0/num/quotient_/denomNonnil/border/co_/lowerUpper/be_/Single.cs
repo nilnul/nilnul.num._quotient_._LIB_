@@ -1,24 +1,27 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace nilnul.num.quotient_.denomNonnil.border.co_.lowerUpper.be_
 {
-	public class Single : lowerUpper.BeA
+	public class Singlular : quotient_.denomNonnil.border.co_.lowerUpper.BeI
 	{
-		public override bool be(in LowerUpper obj)
+		public bool be(in LowerUpperI x)
 		{
-			return  obj.lower.mark == obj.upper.mark && obj.lower.openFalseCloseTrue && obj.upper.openFalseCloseTrue;
+
+			return be_.Close.Singleton.be(x)
+				&&
+				 x.lower.mark.ToImpl() == x.upper.mark;
+
 		}
+	
 
-
-		static public Single Singleton
+		static public Singlular Singleton
 		{
 			get
 			{
-				return nilnul._obj.typ_.nilable_.unprimable_.Singleton<Single>.Instance;
+				return nilnul.obj_.Singleton<Singlular>.Instance;
 			}
 		}
 

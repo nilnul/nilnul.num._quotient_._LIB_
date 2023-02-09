@@ -12,6 +12,8 @@ namespace nilnul.num._quotient.dividing_
 	/// <summary>
 	/// the denominator is nonnil; it could be positive.
 	/// </summary>
+	///
+	[Obsolete(nameof(quotient_.IFrac))]
 	public interface IFrac
 		:nilnul.num._quotient.IDividing
 

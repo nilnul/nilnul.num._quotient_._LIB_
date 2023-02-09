@@ -9,22 +9,22 @@ namespace nilnul.num.quotient_.denomNonnil.border.co_.lowerUpper.vow
 {
 	public class Ee
 		:
-		nilnul.obj.vow.Ee_ofIn<LowerUpper>
+		nilnul.obj.vow.Ee_ofIn<LowerUpperI>
 
 	{
-		public Ee(in LowerUpper val, in VowI_ofIn<LowerUpper> vow) : base(in val, in vow)
+		public Ee(in LowerUpperI val, in VowI_ofIn<LowerUpperI> vow) : base(in val, in vow)
 		{
 		}
 
-		public Ee(in LowerUpper val, VowI_ofIn<LowerUpper> vow) : base(in val, vow)
+		public Ee(in LowerUpperI val, VowI_ofIn<LowerUpperI> vow) : base(in val, vow)
 		{
 		}
 
-		public Ee(LowerUpper val, in VowI_ofIn<LowerUpper> vow) : base(val, in vow)
+		public Ee(LowerUpperI val, in VowI_ofIn<LowerUpperI> vow) : base(val, in vow)
 		{
 		}
 
-		public Ee(LowerUpper val, VowI_ofIn<LowerUpper> vow) : base(val, vow)
+		public Ee(LowerUpperI val, VowI_ofIn<LowerUpperI> vow) : base(val, vow)
 		{
 		}
 	}

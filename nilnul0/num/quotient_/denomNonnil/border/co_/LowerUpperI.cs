@@ -10,6 +10,13 @@ namespace nilnul.num.quotient_.denomNonnil.border.co_
 	/// different with border in that lower or upper has direction
 	/// </summary>
 	public interface LowerUpperI
+		:nilnul.obj.border.co_.LowerUpperI<
+			DenomNonnilI
+			,
+			border_.LowerI
+			,
+			border_.UpperI
+		>
 	{
 
 	}

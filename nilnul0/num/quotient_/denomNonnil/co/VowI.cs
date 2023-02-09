@@ -12,7 +12,7 @@ namespace nilnul.num.quotient_.denomNonnil.co
 		//	(Quotient_unsimplified,Quotient_unsimplified)
 		//>
 		//,
-		nilnul.obj.co.VowI<Quotient_NonnilDenom>
+		nilnul.obj.co.VowI<DenomNonnil>
 	{
 	}
 }

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Numerics;
 using System.Text;
 using nilnul.num.quotient.border;
-using Q1 = nilnul.num.Quotient_NonnilDenom;//._quotient.fraction.op.Simplify.Ed1;
+using Q1 = nilnul.num.quotient_.DenomNonnil;//._quotient.fraction.op.Simplify.Ed1;
 
 namespace nilnul.num.quotient_.denomNonnil
 {
@@ -115,22 +115,22 @@ namespace nilnul.num.quotient_.denomNonnil
 			return !(x==y);
 		}
 
-		static public bool operator ==(Border x,nilnul.num.Quotient_NonnilDenom y) {
+		static public bool operator ==(Border x,nilnul.num.quotient_.DenomNonnil y) {
 			return x==  new Border (true,y);
 		}
-		static public bool operator !=(Border x,nilnul.num.Quotient_NonnilDenom y) {
+		static public bool operator !=(Border x,nilnul.num.quotient_.DenomNonnil y) {
 			return !(x==y);
 		}
 
-		static public bool operator ==(nilnul.num.Quotient_NonnilDenom x, Border y2) {
+		static public bool operator ==(nilnul.num.quotient_.DenomNonnil x, Border y2) {
 			return y2==x;
 		}
-		static public bool operator !=(nilnul.num.Quotient_NonnilDenom x1, Border y) {
+		static public bool operator !=(nilnul.num.quotient_.DenomNonnil x1, Border y) {
 			return !(x1==y);
 		}
 
 		static public bool operator ==(Border x,int y) {
-			return x== new Quotient_NonnilDenom(y);
+			return x== new DenomNonnil(y);
 		}
 		static public bool operator !=(Border x,int y) {
 			return !(x==y);
@@ -171,7 +171,7 @@ namespace nilnul.num.quotient_.denomNonnil
 		}
 
 	
-		static public implicit operator Border(nilnul.num.Quotient_NonnilDenom numBorder) {
+		static public implicit operator Border(nilnul.num.quotient_.DenomNonnil numBorder) {
 			return  Border.CreateClose(numBorder);
 		}
 

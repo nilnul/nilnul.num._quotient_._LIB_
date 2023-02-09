@@ -16,24 +16,24 @@ namespace nilnul.num.quotient_.denomNonnil
 		BoundI
 	{
 
-		public Bound(in border.co_.LowerUpper val) : base(in val)
+		public Bound(in border.co_.LowerUpperI val) : base(in val)
 		{
 		}
 
 		
-		public Bound(border.co_.LowerUpper val) : base(val)
+		public Bound(border.co_.LowerUpperI val) : base(val)
 		{
 		}
 
-		public Bound(border_.Lower lower1, border_.Upper upper1):this(
+		public Bound(border_.LowerI lower1, border_.UpperI upper1):this(
 			new border.co_.LowerUpper(lower1,upper1)
 		)
 		{
 		}
 
-		public border_. Lower lower => eeByRef.Item1;
+		public border_. LowerI lower => eeByRef.lower;
 
-		public border_. Upper upper => eeByRef.Item2;
+		public border_. UpperI upper => eeByRef.upper;
 	}
 
 

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Q1 = nilnul.num.Quotient_NonnilDenom;
+using Q1 = nilnul.num.quotient_.DenomNonnilI;
 
 
 namespace nilnul.num.quotient_.denomNonnil.vow.ee_

@@ -8,8 +8,8 @@ namespace nilnul.num.quotient_.denomNonnil.border.co_.lowerUpper
 {
 	public abstract class BeA : lowerUpper.BeI
 	{
-		public abstract bool be(in LowerUpper obj);
-		public bool be( LowerUpper obj)
+		public abstract bool be(in LowerUpperI obj);
+		public bool be( LowerUpperI obj)
 		{
 			return be(in obj);
 		}

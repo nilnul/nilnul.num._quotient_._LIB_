@@ -8,15 +8,15 @@ using System.Threading.Tasks;
 namespace nilnul.num.quotient_.denomNonnil.be
 {
 	public class Vow
-		: nilnul.obj.be.Vow_ofIn<Quotient_NonnilDenom>
+		: nilnul.obj.be.Vow_ofIn<DenomNonnilI>
 		,
 		nilnul.num.quotient_.denomNonnil.VowI
 	{
-		public Vow(in BeI_ofIn<Quotient_NonnilDenom> val) : base(val)
+		public Vow(in BeI_ofIn<DenomNonnilI> val) : base(val)
 		{
 		}
 
-		public Vow(BeI_ofIn<Quotient_NonnilDenom> x) : base(x)
+		public Vow(BeI_ofIn<DenomNonnilI> x) : base(x)
 		{
 		}
 	}

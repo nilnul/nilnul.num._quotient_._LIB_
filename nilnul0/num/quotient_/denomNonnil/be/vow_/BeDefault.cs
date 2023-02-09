@@ -10,7 +10,7 @@ namespace nilnul.num.quotient_.denomNonnil.be.vow_
 	public class BeDefault<TBe>
 		:
 		Vow
-		where TBe : obj.BeI_ofIn<Quotient_NonnilDenom>, new()
+		where TBe : obj.BeI_ofIn<DenomNonnilI>, new()
 	{
 		public BeDefault()
 			:

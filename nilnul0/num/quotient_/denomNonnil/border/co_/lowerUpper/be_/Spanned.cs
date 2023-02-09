@@ -8,11 +8,11 @@ namespace nilnul.num.quotient_.denomNonnil.border.co_.lowerUpper.be_
 {
 	public class Spanned : lowerUpper.BeI
 	{
-		public bool be(in LowerUpper obj)
+		public bool be(in LowerUpperI obj)
 		{
-			return obj.lower.mark<obj.upper.mark;
+			return obj.lower.mark.ToImpl()<obj.upper.mark;
 		}
-		public bool be( LowerUpper obj)
+		public bool be( LowerUpperI obj)
 		{
 			return be(in obj);
 		}

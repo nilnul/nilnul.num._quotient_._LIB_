@@ -19,6 +19,8 @@ namespace nilnul.num.quotient
 
 		}
 
+
+
 		static public int Int(
 					nilnul.num.Quotient1 q
 	
@@ -27,5 +29,20 @@ namespace nilnul.num.quotient
 			return nilnul.num.integer._SignX.Int(q.numerator);
 
 		}
+		static public int SignAsInt(
+			this nilnul.num.quotient_.DenomNonnilI q
+		) {
+
+			var s= q.numerator.Sign;
+			if (s==0)
+			{
+				return 0;
+			}
+
+			return q.denominator.eeByRef>0 ? s: -s;
+
+		}
+
+
 	}
 }

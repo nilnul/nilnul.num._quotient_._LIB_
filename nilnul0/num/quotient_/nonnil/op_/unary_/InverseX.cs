@@ -23,6 +23,12 @@ namespace nilnul.num.quotient_.nonnil.op_.unary_
 			return new Nonnil (r.denominator, r.numerator);
 		
 		}
+		static public nilnul.num.quotient_.DenomNonnil Op( nilnul.num.quotient_.DenomNonnilI  r) {
+
+			return new nilnul.num.quotient_.DenomNonnil(r.denominator, r.numerator);
+		
+		}
+
 
 		public static Quotient1 Op(Quotient1 mark)
 		{
@@ -32,6 +38,12 @@ namespace nilnul.num.quotient_.nonnil.op_.unary_
 
 		static public Quotient1 Op(BigInteger x) {
 			return  Quotient1.CreateUnit(x);
+		}
+
+		public static DenomNonnil Op(DenomNonnil mark)
+		{
+			return Op( (DenomNonnilI)(mark));
+
 		}
 	}
 }

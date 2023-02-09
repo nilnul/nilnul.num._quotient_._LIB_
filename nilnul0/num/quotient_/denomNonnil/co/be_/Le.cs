@@ -19,12 +19,12 @@ namespace nilnul.num.quotient_.denomNonnil.co.be_
 		//	return obj.Item1 <= obj.Item2;
 		//}
 
-		public bool be(in (Quotient_NonnilDenom, Quotient_NonnilDenom) obj)
+		public bool be(in (DenomNonnil, DenomNonnil) obj)
 		{
 			return obj.Item1 <= obj.Item2;
 		}
 
-		public bool be((Quotient_NonnilDenom, Quotient_NonnilDenom) obj)
+		public bool be((DenomNonnil, DenomNonnil) obj)
 		{
 			return be(in obj);
 		}

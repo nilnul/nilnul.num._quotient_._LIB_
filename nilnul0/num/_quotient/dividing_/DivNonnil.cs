@@ -17,7 +17,9 @@ namespace nilnul.num._quotient.dividing_
 	///		Frac
 	///			the numerator and denominator must be integer, not float, not mantissa
 	///			the denominator must be nonnil.
-	///			
+	///
+
+	[Obsolete(nameof(num.quotient_.DenomNonnil))]
 	public class Frac
 	{
 		/// <summary>

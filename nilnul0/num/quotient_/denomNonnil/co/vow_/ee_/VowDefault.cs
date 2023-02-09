@@ -10,9 +10,9 @@ namespace nilnul.num.quotient_.denomNonnil.co.vow.ee_
 	public class VowDefault<TVow>
 		: vow.Ee
 		where TVow :
-		obj.VowI_ofIn<(Quotient_NonnilDenom, Quotient_NonnilDenom)>, new()
+		obj.VowI_ofIn<(DenomNonnil, DenomNonnil)>, new()
 	{
-		public VowDefault(in (Quotient_NonnilDenom, Quotient_NonnilDenom) val) : base(in val,
+		public VowDefault(in (DenomNonnil, DenomNonnil) val) : base(in val,
 
 				 nilnul._obj.typ_.nilable_.unprimable_.singleton_.ByLazy<TVow>.Instance
 
@@ -24,12 +24,12 @@ namespace nilnul.num.quotient_.denomNonnil.co.vow.ee_
 
 	
 
-		public VowDefault((Quotient_NonnilDenom, Quotient_NonnilDenom) val) : this(in val)
+		public VowDefault((DenomNonnil, DenomNonnil) val) : this(in val)
 		{
 		}
 
 	
-		public VowDefault(Quotient_NonnilDenom x, Quotient_NonnilDenom y) : this(
+		public VowDefault(DenomNonnil x, DenomNonnil y) : this(
 			(x,y)
 		)
 		{

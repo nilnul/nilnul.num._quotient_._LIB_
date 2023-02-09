@@ -7,9 +7,11 @@ using System.Threading.Tasks;
 namespace nilnul.num.quotient
 {
 	/// <summary>
-	/// like bound, but the lower can bigger than upper.
+	/// like bound, but the lower can be bigger than upper.
 	/// </summary>
 	class IRange
+		:nilnul.obj.IRange
+
 	{
 	}
 }

@@ -8,6 +8,6 @@ namespace nilnul.num.quotient_.denomNonnil._bound_
 {
 	public interface LowerI
 	{
-		border_.Lower lower { get; }
+		border_.LowerI lower { get; }
 	}
 }

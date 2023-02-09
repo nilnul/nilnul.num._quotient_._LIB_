@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using nilnul.num.quotient_.denomNonnil;
+using System.Collections.Generic;
 
 using Q1 = nilnul.num.Quotient_unsimplified;
 
@@ -13,7 +14,9 @@ namespace nilnul.num.quotient
 		,
 		IEqualityComparer<nilnul.num.Quotient1>
 		,
-		IEqualityComparer<nilnul.num.Quotient_NonnilDenom>
+		IEqualityComparer<nilnul.num.quotient_.DenomNonnil>
+		,
+		IEqualityComparer<nilnul.num.quotient_.DenomNonnilI>
 
 
 		
@@ -55,18 +58,31 @@ namespace nilnul.num.quotient
 			//throw new NotImplementedException();
 		}
 
-		public bool Equals(Quotient_NonnilDenom x, Quotient_NonnilDenom y)
+		public bool Equals(quotient_.DenomNonnil x, quotient_.DenomNonnil y)
 		{
 			return x == y;
 			//throw new System.NotImplementedException();
 		}
+		public bool Equals(quotient_.DenomNonnilI x, quotient_.DenomNonnilI y)
+		{
+			return (x.ToImpl()- y).SignAsInt()==0;
+			//throw new System.NotImplementedException();
+		}
 
-		public int GetHashCode(Quotient_NonnilDenom obj)
+
+		public int GetHashCode(quotient_.DenomNonnilI obj)
+		{
+			return 0;
+
+			//throw new System.NotImplementedException();
+		}
+		public int GetHashCode(quotient_.DenomNonnil obj)
 		{
 			return obj.GetHashCode();
 
 			//throw new System.NotImplementedException();
 		}
+
 
 		static public Eq2 Singleton
 		{
