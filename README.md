@@ -16,7 +16,7 @@ To repesent a quotient in scientific notation:
 //that would be 123*10^5
 
 To represent a fractional with arbitrary precision:
-```	nilnul.num.quotient_.radix_.floaty_.dec._ParseX.Parse(s).toDenomNonnil("164.40845267098899285")```
+```	nilnul.num.quotient_.radix_.floaty_.dec._ParseX.Parse("164.40845267098899285")```
 
 For periodic frational:
 
