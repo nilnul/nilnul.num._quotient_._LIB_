@@ -36,7 +36,7 @@ Assert.IsTrue(
   )
 );
 ```
-For a closed quotient interval that is nested, and cauchy (in other words, becoming arbitrary small):
+For a stream of closed quotient interval that is nested, and cauchy (in other words, becoming arbitrary small):
 ```nilnul.num.quotient_.denomNonnil.bound_.closed.stream_.nested_.CauchyI```
 //this would be used later by nilnulReal (`nilnul.num._real_._LIB_`) to define real numbers.
 
