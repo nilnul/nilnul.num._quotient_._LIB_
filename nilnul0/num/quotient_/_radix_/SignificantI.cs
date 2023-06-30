@@ -5,14 +5,21 @@ using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace nilnul.num.quotient._radix_
+namespace nilnul.num.quotient_._radix_
 {
 	/// <summary>
 	/// 
 	/// </summary>
 	/// <seealso cref="nameof(MantissaI)"/>
-	public interface SignificantI
+	/// <see cref="_radix.radic.indiced._significed_.SignificantI"/>
+	/// <remarks>
+	/// the value without sign is abs or magnific <see cref="nilnul.obj._measure._unit_.Magnific"/> which is positive, not including 0 as required by this;
+	/// </remarks>
+	public interface SignificI
 	{
-		BigInteger significant { get; }
+		 nilnul.num.integer_.Radix signific
+		{
+			get;
+		}
 	}
 }

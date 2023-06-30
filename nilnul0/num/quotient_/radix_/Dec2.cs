@@ -12,7 +12,7 @@ using Q1 = nilnul.num.Quotient1;//._quotient.fraction.op.Simplify.Ed1;
 namespace nilnul.num.quotient_.radix_
 {
 	public  class Dec2
-		: Radix2
+		: Radix3
 	{
 		public Dec2(integer_.radix_.Dec gits, Num_ofIn mantissa) : base(
 			new integer_.Radix(

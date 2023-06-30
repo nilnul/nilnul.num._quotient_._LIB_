@@ -12,7 +12,7 @@ using Q1 = nilnul.num.Quotient1;//._quotient.fraction.op.Simplify.Ed1;
 namespace nilnul.num.quotient_.radix_
 {
 	public  class Bin
-		: Radix2
+		: quotient_.Radix3
 	{
 		public Bin(integer_.radix_.Bin  gits, Num_ofIn mantissa) : base(
 			new integer_.Radix(
@@ -90,9 +90,27 @@ namespace nilnul.num.quotient_.radix_
 			if (matched.Success)
 			{
 				return new Bin(
-					
-
 					nilnul.num.integer_.radix_.Bin.Parse(
+matched.Groups["sign"].Value+
+						matched.Groups["int"].Value + matched.Groups["tail"].Value
+					)
+					,
+					matched.Groups["tail"].Value.Length
+				);
+			}
+			else
+			{
+				throw new ArgumentException("given string is of bad format.");
+			}
+		}
+
+		static public _radix.basic.indiced.significed_.Bin Parse2significed(string s)
+		{
+			var matched = RegexWhole.Match(s);
+			if (matched.Success)
+			{
+				return new nilnul.num.quotient_._radix.basic.indiced.significed_.Bin(
+					BigInteger.Parse(
 matched.Groups["sign"].Value+
 						matched.Groups["int"].Value + matched.Groups["tail"].Value
 					)
@@ -101,16 +119,11 @@ matched.Groups["sign"].Value+
 					matched.Groups["tail"].Value.Length
 
 				);
-
 			}
 			else
 			{
 				throw new ArgumentException("given string is of bad format.");
 			}
-
-
 		}
-
-
 	}
 }

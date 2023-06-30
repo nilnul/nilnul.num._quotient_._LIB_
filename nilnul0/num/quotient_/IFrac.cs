@@ -10,11 +10,11 @@ using nilnul._num.bigint.be;
 namespace nilnul.num.quotient_
 {
 	/// <summary>
-	/// the denominator is positive
+	/// the denominator is positive:<see cref=""/>
 	/// </summary>
 	public interface IFrac
-		:nilnul.num.IQuotient
-
+		:
+		nilnul.num.IQuotient
 	{
 
 	}

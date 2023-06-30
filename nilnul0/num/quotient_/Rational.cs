@@ -11,10 +11,16 @@ using nilnul._num.bigint.be;
 
 namespace nilnul.num.quotient_
 {
+	/// <summary>
+	/// simplified
+	/// </summary>
+
 	public class Rational
 	//: F //composition is prefereed to inheritace
 	:
 		nilnul.num.QuotientI1
+		,
+		nilnul.num.quotient_.IRational
 	{
 		private F _fraction;
 		public F fraction

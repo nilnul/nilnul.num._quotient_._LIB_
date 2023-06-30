@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using nilnul.num._quotient_;
 using nilnul.num.integer_;
+using nilnul.num.quotient_.denomNonnil;
 using nilnul.num_;
 
 namespace nilnul.num.quotient_.denomNonnil_
@@ -27,7 +28,7 @@ namespace nilnul.num.quotient_.denomNonnil_
 		{
 		}
 
-		public Nonnil(DenomNonnilI val) : base(val)
+		public Nonnil(DenomNonnilI val) : base(val.ToImpl())
 		{
 		}
 

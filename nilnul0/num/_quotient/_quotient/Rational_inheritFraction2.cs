@@ -13,6 +13,8 @@ namespace nilnul.num.rational
 	/// <summary>
 	/// coprime.
 	/// </summary>
+	///
+	[Obsolete(nameof(nilnul.num.quotient_.DenomNonnil))]
 	public partial class Rational_InheritFraction2
 		:Fraction_BigInteger_PositiveNatural3_
 		,

@@ -40,7 +40,7 @@ namespace nilnul.num.quotient.of_.unary_
 				return nilnul.num.quotient_.nonnil.of_.unary_._IndicX.DenomNonnil_indicAssumeNeg(radic, index);
 			}
 			
-			return _PonentX.DenomNonnil_ponentAssumeNat(radic,index);
+			return _PonentX._AsDenomNonnil_1ponent(radic,index);
 
 		}
 
@@ -56,7 +56,7 @@ namespace nilnul.num.quotient.of_.unary_
 				return nilnul.num.quotient_.nonnil.of_.unary_._IndicX.DenomNonnil_indicAssumeNeg(radic, index);
 			}
 			
-			return _PonentX.DenomNonnil_ponentAssumeNat(radic,index);
+			return _PonentX._AsDenomNonnil_1ponent(radic,index);
 
 		}
 

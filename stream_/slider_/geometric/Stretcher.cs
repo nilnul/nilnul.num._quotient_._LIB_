@@ -24,7 +24,6 @@ namespace nilnul.num.quotient.slider_.geometric
 				new slider_.GeometricStandard(rate)	 
 			)
 		{
-
 		}
 	}
 }

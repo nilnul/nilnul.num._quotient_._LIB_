@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 namespace nilnul.num.quotient_
 {
 
+
 	/// <summary>
 	/// the numerator and denominator are coprime.
 	/// </summary>

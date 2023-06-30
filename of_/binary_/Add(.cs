@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using nilnul.num._quotient.fraction.op;
 using nilnul.num.quotient_;
+using System.Runtime.CompilerServices;
 
 namespace nilnul.num.quotient.of_.binary_
 {
@@ -13,6 +14,8 @@ namespace nilnul.num.quotient.of_.binary_
 	:
 		op_.BinaryA,
 		op_.BinaryI1
+		,
+		quotient_.denomNonnil.of_.Binary4interfaceI
 		,
 		quotient_.denomNonnil.of_.BinaryI
 	{
@@ -29,6 +32,7 @@ namespace nilnul.num.quotient.of_.binary_
 
 		}
 
+		[MethodImpl( MethodImplOptions.AggressiveInlining)]
 		public DenomNonnil opAsImpl(DenomNonnilI arg, DenomNonnilI arg1)
 		{
 			return new nilnul.num.quotient_.DenomNonnil(
@@ -41,6 +45,12 @@ namespace nilnul.num.quotient.of_.binary_
 
 		}
 		public DenomNonnilI op(DenomNonnilI arg, DenomNonnilI arg1)
+		{
+			return opAsImpl(arg,arg1);
+
+		}
+
+		public DenomNonnil op(DenomNonnil arg, DenomNonnil arg1)
 		{
 			return opAsImpl(arg,arg1);
 

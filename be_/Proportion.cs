@@ -4,14 +4,17 @@ using System.Linq;
 using System.Numerics;
 using System.Text;
 using nilnul.num._quotient.fraction.op;
+using nilnul.num.quotient.bound_.bity_;
 using Q = nilnul.num.quotient.Q;
 using Q1 = nilnul.num.Quotient1;
 
 namespace nilnul.num.quotient.be_
 {
 	/// <summary>
-	/// (0,1)
+	/// [0,1]
 	/// </summary>
+	///
+	[Obsolete(nameof(IProbal))]
 	public class Proportion
 		:
 		nilnul.num.quotient.BeI4
@@ -29,4 +32,5 @@ namespace nilnul.num.quotient.be_
 			}
 		}
 	}
+
 }

@@ -10,11 +10,19 @@ namespace nilnul.num.quotient_.denomNonnil
 	public  class Comp
 		:
 		IComparer<Q1>
+		,
+		IComparer<DenomNonnil>
 	{
 		public int Compare(Q1 x, Q1 y)
 		{
 			return (x.ToImpl() - y).SignAsInt();
 		}
+
+		public int Compare(DenomNonnil x, DenomNonnil y)
+		{
+			return (x - y).SignAsInt();
+		}
+
 		static public Comp Singleton
 		{
 			get

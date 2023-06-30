@@ -13,14 +13,14 @@ namespace nilnul.num.quotient_.nonnil.of_.unary_
 		static public DenomNonnil DenomNonnil_radicAssumeNonnil_indicAssumeNeg(nilnul.num.quotient_.DenomNonnilI quotient, BigInteger index)
 		{
 
-			return 1 / nilnul.num.quotient.of_.unary_._PonentX.DenomNonnil_ponentAssumeNat(quotient, -index);
+			return 1 / nilnul.num.quotient.of_.unary_._PonentX._AsDenomNonnil_1ponent(quotient, -index);
 		}
 
 		static public DenomNonnil DenomNonnil_radicAssumeNonnil(nilnul.num.quotient_.DenomNonnilI quotient, BigInteger index)
 		{
 			if (index >= 0)
 			{
-				return nilnul.num.quotient.of_.unary_._PonentX.DenomNonnil_ponentAssumeNat(quotient, index);
+				return nilnul.num.quotient.of_.unary_._PonentX._AsDenomNonnil_1ponent(quotient, index);
 			}
 			return DenomNonnil_radicAssumeNonnil_indicAssumeNeg(quotient, index);
 		}

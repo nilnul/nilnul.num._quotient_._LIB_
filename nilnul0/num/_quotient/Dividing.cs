@@ -11,6 +11,10 @@ namespace nilnul.num._quotient
 	/// <summary>
 	/// the underneath can be zero. To bypass the check, the computation can be fast.
 	/// </summary>
+	/// alias:
+	///		ratio
+	///			eg:
+	///				3:0
 	public readonly struct Dividing
 	{
 		/// <summary>

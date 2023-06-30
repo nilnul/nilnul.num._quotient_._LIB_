@@ -6,13 +6,16 @@ using System.Threading.Tasks;
 
 namespace nilnul.num.quotient_.denomNonnil.of_
 {
+
 	public interface BinaryI
 		:
-		nilnul.obj.op_.BinaryI<
-			DenomNonnilI
+		nilnul.obj.of_.BinaryI<
+			DenomNonnil
 	>
 	{
 	}
+	
+
 
 
 }

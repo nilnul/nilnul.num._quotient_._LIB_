@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace nilnul.num.quotient.border.co._be_
 {
-	public interface OfLowerUpperI:nilnul.obj.BeI1<quotient_.denomNonnil.border.co_.LowerUpperI>
+	public interface OfLowerUpperI:nilnul.obj.BeI1<quotient_.denomNonnil._range.border.co_.LowerUpperI>
 	{
 	}
 }

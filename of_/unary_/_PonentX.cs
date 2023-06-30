@@ -27,7 +27,7 @@ namespace nilnul.num.quotient.of_.unary_
 	{
 
 
-		static public DenomNonnil DenomNonnil_ponentAssumeNat(
+		static public DenomNonnil _AsDenomNonnil_1ponent(
 			BigInteger radic,
 			BigInteger index
 		)
@@ -37,15 +37,20 @@ namespace nilnul.num.quotient.of_.unary_
 
 		}
 
-		static public num.quotient_.DenomNonnil DenomNonnil_ponentAssumeNat(num.quotient_.DenomNonnilI r, BigInteger index)
+		static public num.quotient_.DenomNonnil _AsDenomNonnil_1ponent(num.quotient_.DenomNonnilI r, BigInteger index)
 		{
 			return
-				 DenomNonnil_ponentAssumeNat(r.numerator, index)
+				 _AsDenomNonnil_1ponent(r.numerator, index)
 				/
-				DenomNonnil_ponentAssumeNat(r.denominator, index)
+				_AsDenomNonnil_1ponent(r.denominator, index)
 			;
 		}
 
+
+		static public num.quotient_.DenomNonnil AsDenomNonnil(num.quotient_.DenomNonnilI r, nilnul.Num1 index)
+		{
+			return _AsDenomNonnil_1ponent( r, index.en)	;
+		}
 
 
 

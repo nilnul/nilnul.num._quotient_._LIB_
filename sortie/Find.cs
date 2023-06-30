@@ -15,5 +15,14 @@ namespace nilnul.num.quotient.sortie
 		) {
 			return nilnul.obj.sortie._FindX._IndexRange(sortie, el, nilnul.num.quotient.Comparer2.Singleton);
 		}
+
+		static public (int?, int?) _IndexRange_assumeSortie(
+			IEnumerable<nilnul.num.quotient_.DenomNonnil > sortie
+			,
+			nilnul.num.quotient_.DenomNonnil el
+		) {
+			return nilnul.obj.sortie._FindX._IndexRange(sortie, el, nilnul.num.quotient_.denomNonnil.Comp.Singleton);
+		}
+
 	}
 }

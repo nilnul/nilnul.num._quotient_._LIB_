@@ -11,7 +11,7 @@ using nilnul._num.bigint.be;
 
 namespace nilnul.num.quotient_
 {
-	[Obsolete(nameof(quotient_.radix.ieee_.bin_.IRationable))]
+	[Obsolete(nameof(quotient_.radix.ext.errable_.ieee_.bin_.nonerr_.INoninf))]
 	static public class _DblX
 	{
 		

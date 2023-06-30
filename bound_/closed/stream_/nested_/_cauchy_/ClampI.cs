@@ -8,10 +8,16 @@ namespace nilnul.num.quotient.bound_.closed.stream_.nested_._cauchy_
 {
 
 	/// <summary>
+	/// moveNext() multiple times till the bound is small enough;
 	/// </summary>
 	/// <remarks>
 	/// "C" is also the initial of "Cauchy"
 	/// </remarks>
+	/// alias:
+	///		clamp
+	///		clasp
+	///		squeeze
+	///		converge
 	public interface ClampI1
 	{
 		/// <summary>

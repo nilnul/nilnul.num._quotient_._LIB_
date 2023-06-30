@@ -14,7 +14,10 @@ namespace nilnul.num.quotient_.radix_.binary_
 	///		-0
 	///		NaN
 	/// </summary>
-	public interface IDbl:radix.ieee_.bin_.IRationable
+	/// <remarks>
+	///  <see cref="radix.ext.errable_.ieee_.IBin"/>
+	/// </remarks>
+	public interface IDbl //:radix.ieee_.bin_.IRationable
 	{
 	}
 }

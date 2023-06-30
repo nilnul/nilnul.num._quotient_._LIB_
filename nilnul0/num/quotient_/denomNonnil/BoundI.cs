@@ -4,9 +4,7 @@ using Q1 = nilnul.num.Quotient1;
 namespace nilnul.num.quotient_.denomNonnil
 {
 	public interface BoundI
-		:_bound_.LowerI
-		,
-		_bound_.UpperI
+		:RangeI
 	{
 		//bool isSingleton { get; }
 		//nilnul.num.quotient_.Nonneg diameter { get; }
@@ -21,6 +19,7 @@ namespace nilnul.num.quotient_.denomNonnil
 		//bool notCapacityLt(quotient_.Positive1 diameter);
 		//bool capacityLt(quotient_.Positive1 diameter);
 	}
+
 
 
 

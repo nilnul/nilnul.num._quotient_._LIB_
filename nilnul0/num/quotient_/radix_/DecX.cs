@@ -28,7 +28,7 @@ namespace nilnul.num.quotient_.radix_
 		//static public string Regex_str = @"(?<int>[\d]*(\.(?<tail>[\d]*))?";
 		static public Regex RegexWhole = new Regex(
 			@"^
-				(?<int>[+-]?[\d]*)
+				(?<int>[-]?[\d]*) #+ is regarded as unary of
 				(\.
 					(?<tail>[\d]*)
 				)?
@@ -65,6 +65,29 @@ namespace nilnul.num.quotient_.radix_
 		}
 
 
+		static public _radix.basic.indiced.significed_.Dec Parse2significed(string s)
+		{
+			var matched = RegexWhole.Match(s);
+			if (matched.Success)
+			{
+				return new _radix.basic.indiced.significed_.Dec(
+					BigIntX.Parse(
+						matched.Groups["int"].Value + matched.Groups["tail"].Value
+					)
+
+					,
+					-matched.Groups["tail"].Value.Length
+
+				);
+
+			}
+			else
+			{
+				throw new ArgumentException("given string is of bad format.");
+			}
+		}
+
+		[Obsolete(nameof(Parse2significed))]
 		static public Dec Parse(string s)
 		{
 			var matched = RegexWhole.Match(s);
@@ -85,9 +108,8 @@ namespace nilnul.num.quotient_.radix_
 			{
 				throw new ArgumentException("given string is of bad format.");
 			}
-
-
 		}
+
 
 
 	}

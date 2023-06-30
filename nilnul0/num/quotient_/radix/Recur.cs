@@ -8,6 +8,7 @@ using System.Text;
 using Q1 = nilnul.num._quotient.fraction.op.Simplify.Ed1;
 using q = nilnul.num.quotient;
 using nilnul.txt;
+using nilnul.bit.op_.unary_.not;
 
 namespace nilnul.num.quotient_.radix
 {
@@ -15,8 +16,13 @@ namespace nilnul.num.quotient_.radix
 	/// 
 	/// </summary>
 	/// <remarks>recurring, cyclic, repeating, recurring...</remarks>
+	///
+	[Obsolete(nameof(Recur1))]
 	public partial class Recur
-		: quotient._radix_.AmplifierI
+		:
+		quotient._radix_.AmplifierI
+		,
+		Recur8unsignedI
 	{
 
 		private Radix1 _radix;
@@ -106,6 +112,7 @@ namespace nilnul.num.quotient_.radix
 		}
 
 
+		[Obsolete()]
 		public BigInteger amplifier
 		{
 			get
@@ -115,6 +122,49 @@ namespace nilnul.num.quotient_.radix
 				//throw new NotImplementedException();
 			}
 		}
+		public BigInteger amplifier1
+		{
+			get
+			{
+				return BigInteger.Abs( _radix.significand );
+
+				//throw new NotImplementedException();
+			}
+		}
+
+
+		/// <summary>
+		/// note the radix precision might be shorter than cycle
+		/// </summary>
+		Radix3 radix3
+		{
+			get
+			{
+				var r = quotient_.radix.of_._OfSignificedX.ToByNeg(this._radix);//.unsigned;
+
+				var r1 = quotient_.radix.recur._OfX.PrependNecessaryNils(
+					r
+					,
+					this.period
+				);
+
+
+				return /*quotient_.radix.to_._RegressionX.ToRadix3*/(
+
+					r1.radix
+				); ;
+			}
+		}
+
+		public Num_ofIn period => Num_ofIn.Of(this.recurSpanAsBigInt);
+
+		public bool negated => this.significand.Sign < 0;
+
+		public nonneg_.radix.RecurI unsigned => new nonneg_.radix.Recur(
+			this.radix3.unsigned
+			,
+			this.period
+		);
 
 		/// <summary>
 		/// return the string of digits inside the recuring scope.
@@ -138,11 +188,15 @@ namespace nilnul.num.quotient_.radix
 
 		public override string ToString()
 		{
+			return recur._PhraseX.Phrase(this);
+
 			return toTxt1();
 		}
 
+		[Obsolete()]
 		public string ToStr()
 		{
+			return ToString();
 			if (recurSpan == 0)
 			{
 				return _radix.ToString();//.toStr_linear_0_prepended2();
@@ -187,6 +241,7 @@ namespace nilnul.num.quotient_.radix
 		[Obsolete()]
 		public string toTxt()
 		{
+			return ToString();
 			if (recurSpan == 0)
 			{
 				return _radix.ToString();//.toStr_linear_0_prepended2();
@@ -222,35 +277,47 @@ namespace nilnul.num.quotient_.radix
 			return (sign < 0 ? "-" : "") + suffix;
 		}
 
+		/// <summary>
+		/// in radix form, not in floaty form
+		/// </summary>
+		/// <returns></returns>
 		public string toTxt1()
 		{
+			return ToString();
 			#region supposing that Radix is standardized: with a dot somewhere; and that the recur only occurs after dot.
 
 
 			#endregion
 			if (recurSpan == 0)
 			{
-				return _radix.ToString();//.toStr_linear_0_prepended2();
+
+				return _radix.toTxt();//.toStr_linear_0_prepended2();
+
+				//var radix2 =  Radix2.Of(_radix);
+				var t = _radix.toTxt_noSign_dotInserted_noZeroPrepend();
+
+				return t.Prepend(sign < 0 ? "-" : "").ToString();
+
 			}
 
-			var sb = 
+			var sb =
 					_radix.toTxt_noSign_dotInserted_noZeroPrepend()
 			;
 			#region insert recur enclosing
 
 
 
-			sb.Insert(sb.Length-recurSpanAsInt,separatorForLatterCycle);
+			sb.Insert(sb.Length - recurSpanAsInt, separatorForLatterCycle);
 
 			#endregion
 
-			if (sb.First()==Radix.DOT)
+			if (sb.First() == Radix.DOT)
 			{
 				sb.Prepend('0');
 
 
 			}
-			sb.Prepend(sign<0?"-":"");
+			sb.Prepend(sign < 0 ? "-" : "");
 
 			return sb.ToString();
 
@@ -294,10 +361,10 @@ namespace nilnul.num.quotient_.radix
 		//	return (sign < 0 ? "-" : "") + suffix;
 		//}
 
-		public string ToMathMl()
-		{
-			throw new NotImplementedException();
-		}
+		//public string ToMathMl()
+		//{
+		//	throw new NotImplementedException();
+		//}
 
 		public string ToStr_func()
 		{
@@ -308,25 +375,10 @@ namespace nilnul.num.quotient_.radix
 
 
 
-		public Recur()
-			: this(2, 0, 0, 0)
-		{
-
-
-		}
-
-		private Recur(Radix1 radix, BigInteger _natural_recurSpan)
-		{
-			this.radix = radix;
-			this.recurSpanAsBigInt = _natural_recurSpan;
-
-
-
-		}
-
 
 		public Recur(Radix1 float_, Num1 recurSpan_natural)
 		{
+
 			this.radix = float_;
 			this._recurSpan = recurSpan_natural;
 
@@ -334,6 +386,22 @@ namespace nilnul.num.quotient_.radix
 
 		}
 
+		public Recur(Radix1 radix, BigInteger _natural_recurSpan) : this(radix, new Num1(_natural_recurSpan))
+		{
+			//this.radix = radix;
+			//this.recurSpanAsBigInt = _natural_recurSpan;
+
+
+
+		}
+
+
+		public Recur()
+			: this(2, 0, 0, 0)
+		{
+
+
+		}
 
 
 		public Recur(BigInteger radix_plural, BigInteger significand, BigInteger index, BigInteger recurSpan_natural)
@@ -351,7 +419,7 @@ namespace nilnul.num.quotient_.radix
 		/// <summary>
 		/// let 03.09(99) be 03.09+.01
 		/// </summary>
-		public void foldRimmings()
+		void foldRimmings()
 		{
 
 
@@ -382,7 +450,7 @@ namespace nilnul.num.quotient_.radix
 		}
 
 
-		public void set(BigInteger finite, Radix1 recur)
+		void set(BigInteger finite, Radix1 recur)
 		{
 
 			///assert finite as 
@@ -402,6 +470,7 @@ namespace nilnul.num.quotient_.radix
 			Recur p
 			)
 		{
+			return recur.to_._ToQuotientX.ToQuotient1(p);
 
 			var recurPart = p.recurPart();
 
@@ -451,7 +520,8 @@ namespace nilnul.num.quotient_.radix
 		[Obsolete()]
 		static public Recur Quotient2Recur(BigInteger root, Quotient1 q, BigInteger digitsAfterPoint_natural)
 		{
-
+			var r = recur.of_.ofQuotient_._TruncateInMantissaX._AsRecur_0radic_2mantissa(root, q, digitsAfterPoint_natural);
+			return recur.to_._RegressionsX.ToRecurAsSignificed(r);
 
 			var intProper = nilnul.num.quotient_.FlooredX.ToFloored(q);
 
@@ -498,6 +568,12 @@ namespace nilnul.num.quotient_.radix
 		[Obsolete()]
 		static public Recur FroRational(BigInteger radix_plural, Quotient1 r)
 		{
+
+			var r11 = recur.of_._OfQuotientX._AsByNeg_0radic(radix_plural, r);
+			return recur.to_._RegressionsX.ToRecurAsSignificed(r11);
+
+
+
 			var intProper = nilnul.num.quotient_.FlooredX.ToFloored(r);
 			BigInteger significand = intProper.floor;
 			BigInteger remainder = intProper.proper.en.numerator;
@@ -543,8 +619,14 @@ namespace nilnul.num.quotient_.radix
 		/// <param name="x"></param>
 		/// <returns></returns>
 
-		static public Recur _FroQuotient(BigInteger _radix__plural, nilnul.num.Quotient1 x,BigInteger _natural__digitsAfterDo)
+		static public Recur _FroQuotient(BigInteger _radix__plural, nilnul.num.Quotient1 x, BigInteger _natural__digitsAfterDo)
 		{
+			return recur.to_._RegressionsX.ToRecurAsSignificed(
+				recur.of_.ofQuotient_._TruncateInMantissaX._AsRecur_0radic_2mantissa(
+					_radix__plural, x, _natural__digitsAfterDo
+				)
+			);
+
 			const int TO_BE_FOUND = -1;
 
 			var mixedFrac = nilnul.num.quotient_.FlooredX.ToFloored(x);
@@ -559,7 +641,7 @@ namespace nilnul.num.quotient_.radix
 
 			while (recurPosition == TO_BE_FOUND)
 			{
-				if (_natural__digitsAfterDo-- <=0)
+				if (_natural__digitsAfterDo-- <= 0)
 				{
 					break;
 				}
@@ -584,22 +666,22 @@ namespace nilnul.num.quotient_.radix
 
 			}
 
-			if (recurPosition==TO_BE_FOUND)
+			if (recurPosition == TO_BE_FOUND)
 			{
 				return new Recur(_radix__plural, multiplier, exponent, 0);
 
 			}
 			var recurSpan = remainders.Count - recurPosition;
-			if (recurSpan==0)
+			if (recurSpan == 0)
 			{
 				var radix = new Radix1(
-					
+
 					_radix__plural, multiplier, exponent
 				);
 
-				radix.appendZero(   );
+				radix.appendZero();
 
-				return new Recur(  radix, 1);
+				return new Recur(radix, 1);
 
 			}
 
@@ -615,6 +697,13 @@ namespace nilnul.num.quotient_.radix
 		/// <returns></returns>
 		static public Recur _FroQuotient(BigInteger _radix__plural, Quotient1 x)
 		{
+			return recur.to_._RegressionsX.ToRecurAsSignificed(
+				recur.of_._OfQuotientX._AsByNeg_0radic(
+					_radix__plural, x
+				)
+			);
+
+
 			const int TO_BE_FOUND = -1;
 
 			var mixedFrac = quotient_.FlooredX.ToFloored(x);
@@ -627,7 +716,7 @@ namespace nilnul.num.quotient_.radix
 
 			BigInteger recurPosition = TO_BE_FOUND;
 
-			while (recurPosition ==TO_BE_FOUND)
+			while (recurPosition == TO_BE_FOUND)
 			{
 				if (remainder == 0)
 				{
@@ -640,7 +729,7 @@ namespace nilnul.num.quotient_.radix
 					remainders.Add(remainder);
 
 					multiplier = multiplier * _radix__plural
-						+ BigInteger.DivRem(remainder * _radix__plural, x.denominator.val, out remainder); 
+						+ BigInteger.DivRem(remainder * _radix__plural, x.denominator.val, out remainder);
 					exponent--;
 
 					recurPosition = remainders.IndexOf(remainder);
@@ -661,6 +750,14 @@ namespace nilnul.num.quotient_.radix
 		[Obsolete("better to get the integer part into calculation as a whole")]
 		static public Recur _FroProper(BigInteger _radix_plural, nilnul.num.quotient.be_.proper.vow.En proper)
 		{
+
+			return recur.to_._RegressionsX.ToRecurAsSignificed(
+				recur.of_._OfProperX._OfProper_0radic(
+					_radix_plural, proper
+				)
+			);
+
+
 			const int NOT_FOUND = -1;
 
 
@@ -684,15 +781,15 @@ namespace nilnul.num.quotient_.radix
 				{
 					remainders.Add(remainder);
 
-					multiplier = 
+					multiplier =
 						multiplier * _radix_plural
-						+ 
+						+
 						BigInteger.DivRem(
-							remainder * _radix_plural,									proper.en.denominator.val, 
+							remainder * _radix_plural, proper.en.denominator.val,
 							out remainder
 						)
-					;  
-					exponent--;	//this offsets the effect of multiplier*_radix
+					;
+					exponent--; //this offsets the effect of multiplier*_radix
 
 					recurFound = remainders.IndexOf(remainder);
 

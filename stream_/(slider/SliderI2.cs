@@ -32,7 +32,9 @@ namespace nilnul.num.quotient
 
 		public abstract Quotient1 current { get; }
 
-		Q1 obj.stream_._slider._cursor_.CurrentI<Q1>.current => current;
+		//Q1 obj.stream_._slider._cursor_.CurrentI<Q1>.current => ;
+
+		Q1 obj.stream_._slider._skid_.CurrentI<Q1>.current => current;
 
 		public abstract void moveNext();
 	}

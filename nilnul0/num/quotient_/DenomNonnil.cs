@@ -102,7 +102,12 @@ namespace nilnul.num.quotient_
 		{
 
 		}
-
+		/// <summary>
+		/// 
+		/// </summary>
+		/// <param name="num"></param>
+		/// <param name="denominator"></param>
+		/// todo: change ref to in;
 		public DenomNonnil(
 			 BigInteger num
 			,
@@ -189,10 +194,16 @@ namespace nilnul.num.quotient_
 		}
 
 
+		[Obsolete(nameof(toInverse))]
 		public DenomNonnil inverse()
 		{
 			return ~(this);
 		}
+		public DenomNonnil toInverse()
+		{
+			return ~(this);
+		}
+
 
 
 		public override string ToString()
@@ -218,6 +229,13 @@ namespace nilnul.num.quotient_
 			return Simplify(this);
 
 		}
+		public DenomNonnil toAbs()
+		{
+
+			return this>=0?this: -this;
+
+		}
+
 
 		public DenomNonnil(
 			in BigInteger x
@@ -257,25 +275,32 @@ namespace nilnul.num.quotient_
 		{
 		}
 
-		public DenomNonnil(QuotientI a):this(a.numerator,a.denominator)
+		public DenomNonnil(QuotientI a) : this(a.numerator, a.denominator)
 		{
 		}
 
-	
 
+		[Obsolete()]
+	
 		public void standardize()
 		{
-			if (_numerator < 0)
+			fracize();
+		}
+		public void fracize()
+		{
+			if (_denominator < 0)
 			{
 				_denominator.neg();
+				_numerator = -_numerator;
 			}
 		}
+
 
 		public bool beNonneg
 		{
 			get
 			{
-				standardize();
+				fracize();
 				return _numerator >= 0;
 			}
 		}
@@ -283,7 +308,7 @@ namespace nilnul.num.quotient_
 		{
 			get
 			{
-				standardize();
+				fracize();
 				return _numerator <= 0;
 			}
 		}
@@ -292,7 +317,7 @@ namespace nilnul.num.quotient_
 		{
 			get
 			{
-				standardize();
+				fracize();
 				return _numerator < 0;
 			}
 		}
@@ -300,7 +325,7 @@ namespace nilnul.num.quotient_
 		{
 			get
 			{
-				standardize();
+				fracize();
 				return _numerator > 0;
 			}
 		}
@@ -583,6 +608,21 @@ namespace nilnul.num.quotient_
 				 a._denominator * b.denominator
 			);
 		}
+		static public DenomNonnil operator +(DenomNonnilI a, DenomNonnil b)
+		{
+			return new DenomNonnil(
+				 a.numerator
+				 *
+				 b.denominator.eeByRef
+				 +
+				 b.numerator
+				 *
+				 a.denominator.eeByRef
+				 ,
+				 a.denominator * b.denominator
+			);
+		}
+
 
 
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -595,10 +635,20 @@ namespace nilnul.num.quotient_
 			return a + -b;
 		}
 
+
 		static public DenomNonnil operator -(
 			DenomNonnil a
 			,
 			DenomNonnilI b
+			)
+		{
+			return a + -(b.ToImpl());
+		}
+
+		static public DenomNonnil operator -(
+			DenomNonnilI a
+			,
+			DenomNonnil b
 			)
 		{
 			return a + -(b.ToImpl());
@@ -731,7 +781,7 @@ namespace nilnul.num.quotient_
 
 		static public DenomNonnil operator *(DenomNonnil a, DenomNonnilI b)
 		{
-			
+
 
 			return new DenomNonnil(
 				a._numerator * b.numerator
@@ -740,6 +790,14 @@ namespace nilnul.num.quotient_
 			);
 		}
 
+		static public DenomNonnil operator *(DenomNonnilI a, DenomNonnil b)
+		{
+
+
+			return b*a;
+		}
+
+
 
 		static public DenomNonnil operator ~(DenomNonnil a)
 		{
@@ -747,18 +805,62 @@ namespace nilnul.num.quotient_
 				a._denominator, a._numerator
 			);
 		}
+
+
 		static public DenomNonnil operator /(DenomNonnil a, DenomNonnil b)
 		{
 			return a * ~b;
+		}
+		static public DenomNonnil operator /(BigInteger a, DenomNonnil b)
+		{
+			return a * ~b;
+		}
+
+		static public DenomNonnil Of(BigInteger x) {
+
+			if (x==-1)
+			{
+				return DenomNonnil.NegOne;
+			}
+			if (x==0)
+			{
+				return DenomNonnil.Nil;
+			}
+			if (x==1)
+			{
+				return DenomNonnil.One;
+			}
+			if (x==2)
+			{
+				return DenomNonnil.Two;
+			}
+			return new DenomNonnil(x);
 		}
 
 
 		static public DenomNonnil Inverse(DenomNonnil a)
 		{
-
 			return ~a;
+		}
 
 
+		/// <summary>
+		/// <see cref="num.quotient_.IInversal"/>
+		/// </summary>
+		/// <param name="a"></param>
+		/// <returns></returns>
+		static public DenomNonnil Inverse(BigInteger a)
+		{
+			if (a==0)
+			{
+				return DenomNonnil.Nil;
+			}
+			if (a == 1)
+			{
+				return DenomNonnil.One;
+			}
+	
+			return new DenomNonnil(1, a);  /// keep it raw, even for -1;
 		}
 
 

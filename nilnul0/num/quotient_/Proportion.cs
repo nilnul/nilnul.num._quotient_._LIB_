@@ -12,6 +12,7 @@ using P = nilnul.num.quotient_.Positive1;
 
 namespace nilnul.num.quotient_
 {
+	[Obsolete(nameof(Probal))]
 	public class Proportion : nilnul.num.quotient.be_.proportion.vow.Ee
 		,
 		nilnul.num.QuotientI1

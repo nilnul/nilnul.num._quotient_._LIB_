@@ -7,11 +7,11 @@ using System.Text;
 namespace nilnul.num.rational.float_
 {
 	/// <summary>
-	/// 
+	/// <see cref="quotient_.radix.RecurI"/>
 	/// </summary>
 	/// <remarks>recurring, cyclic, repeating, recurring...</remarks>
 	/// 
-	[Obsolete()]
+	[Obsolete(nameof(quotient_.radix.recur_.ByNeg))]
 	public partial class Periodic
 	{
 
@@ -113,6 +113,10 @@ namespace nilnul.num.rational.float_
 
 		public override string ToString()
 		{
+			return  quotient_.radix_.floaty.recur_.mantissaed.phrase_._DwellIntX.Phrase(
+				quotient_.radix_.floaty.recur_.mantissaed.of_.coerce_._OfRecurX.ToMantissaed(this)
+			);
+
 			return toTxt();
 		}
 		public string ToStr()
@@ -153,8 +157,14 @@ namespace nilnul.num.rational.float_
 		}
 		public const string separatorForLatterCycle = "(";
 
+		/// <summary>
+		/// make this floaty by prepending nils;
+		/// </summary>
+		/// <returns></returns>
 		public string toTxt()
 		{
+			return quotient_.radix_.floaty.recur_.mantissaed.of_.coerce_._OfRecurX.ToMantissaed(this).ToString();
+
 			if (recurSpan == 0)
 			{
 				return _float.ToString();//.toStr_linear_0_prepended2();
@@ -172,10 +182,10 @@ namespace nilnul.num.rational.float_
 			var suffix = magStr.Substring(0, unRecur);
 			var index = this.indexAsInt;
 			index += recurSpanAsInt;
-			while (index > 0)
+			while (index > 0)  /// append cycles;
 			{
 				index -= recurPartStr.Length;
-				suffix += recurPartStr;
+				suffix += recurPartStr; 
 			}
 			var offset = suffix.Length + index;
 			if (offset <= 0)
@@ -366,6 +376,28 @@ namespace nilnul.num.rational.float_
 
 		static public Periodic FroRational(BigInteger radix_plural, Rational_InheritFraction2 r)
 		{
+			var t = quotient_.radix.recur.of_._OfQuotientX._AsSignificed_0radic(
+				radix_plural
+				,
+				nilnul.num.Quotient1.CreateByDivide(
+					r.numerator1
+					,
+					r.denominatorAsBigInt
+				)
+			);
+
+			return new Periodic(
+				t.radix.radic8integer
+				,
+				//nilnul.num.integer_.radix.
+				(BigInteger) t.significand
+				,
+				t.indic
+				,
+				t.period
+
+				);
+
 			var intProper = r.ToIntAndProper();
 			BigInteger significand = intProper.Item1;
 			BigInteger remainder = intProper.Item2.numerator;

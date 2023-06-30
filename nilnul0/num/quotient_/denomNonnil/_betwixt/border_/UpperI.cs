@@ -1,0 +1,7 @@
+﻿namespace nilnul.num.quotient_.denomNonnil._range.border_
+{
+	public interface UpperI : BorderI
+		,
+		nilnul.obj.border_.UpperI<DenomNonnil>
+	{ }
+}

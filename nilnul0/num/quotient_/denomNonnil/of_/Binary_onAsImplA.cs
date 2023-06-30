@@ -7,7 +7,7 @@ namespace nilnul.num.quotient_.denomNonnil.of_
 		_binary_.AsImplI
 		,
 
-		BinaryI
+		Binary4interfaceI
 
 	{
 		public DenomNonnilI op(DenomNonnilI par, DenomNonnilI par1)

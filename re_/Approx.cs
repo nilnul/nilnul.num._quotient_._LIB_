@@ -1,4 +1,5 @@
 ﻿using nilnul.num.quotient.be_.approx_;
+using nilnul.num.quotient_;
 using nilnul.num.quotient_.denomNonnil;
 using nilnul.num.quotient_.denomNonnil_;
 using System;
@@ -19,17 +20,17 @@ namespace nilnul.num.quotient.re_
 	{
 
 
-		public Approx(Nonneg x) : this(new Nil( x ))
+		public Approx(quotient_.denomNonnil_. Nonneg x) : this(new Nil( x ))
 		{
 		}
 		public Approx(
 			num.quotient_.DenomNonnilI x
 		)
-		:this( new Nonneg(x) )
+		:this( new quotient_.denomNonnil_.Nonneg(x) )
 		{
 
 		}
-		public Approx(int x=0):this(new Nonneg(x))
+		public Approx(int x=0):this(new quotient_.denomNonnil_.Nonneg(x))
 		{
 
 		}
@@ -54,6 +55,11 @@ namespace nilnul.num.quotient.re_
 			);
 		}
 
+		public bool re(quotient_.DenomNonnil denomNonnil, int v)
+		{
+			return re(denomNonnil, new DenomNonnil(v));
+
+		}
 
 		static public Approx Singleton
 		{

@@ -12,6 +12,9 @@ namespace nilnul.num.quotient_
 	/// for recuring <see cref="nameof(radix.RecurI)"/> 
 	/// </summary>
 	public interface RadixI
+		:_radix_.SignificI,_radix_.IndicI
 	{
+
 	}
+
 }

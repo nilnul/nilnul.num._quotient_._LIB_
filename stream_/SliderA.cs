@@ -6,9 +6,6 @@ using System.Threading.Tasks;
 
 namespace nilnul.num.quotient.stream_
 {
-	public interface SliderI1 :nilnul.num.quotient.StreamI6,
-		nilnul.obj.stream_.SliderI<nilnul.num.Quotient1>
-		{ }
 
 	/// <summary>
 	/// implemented stream using members of slider. stream.next is upon slider members

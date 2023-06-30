@@ -2,4 +2,5 @@
 {
 	public interface IClasp:bound_.IClosed { }
 
+
 }

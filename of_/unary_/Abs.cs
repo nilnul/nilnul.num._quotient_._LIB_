@@ -45,7 +45,7 @@ namespace nilnul.num.quotient.of_.unary_
 
 		public quotient_.DenomNonnil op( in quotient_.DenomNonnil mark)
 		{
-			mark.standardize();
+			mark.fracize();
 
 			return new quotient_.DenomNonnil(
 				BigInteger.Abs(

@@ -13,6 +13,11 @@ namespace nilnul.num.quotient.to_
 		static public double ByCastNumDen(Q1 x) {
 			return (double) x.numerator /(double) ( x.denominator1.en);
 		}
+
+		static public double ToDbl_byInt2dbl(this nilnul.num.quotient_.DenomNonnilI  x) {
+			return (double) x.numerator /(double) ( x.denominator.eeByRef);
+		}
+
 		static public double ByIntegerDiv(Q1 x, int digitsAftDot=4) {
 			var powed = nilnul.num.op_.binary_._PowX._Op(10, 4); 
 			return  (double) ( BigInteger.Divide(x.numerator * powed, x.denominator1) / powed );

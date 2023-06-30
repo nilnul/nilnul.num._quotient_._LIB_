@@ -21,8 +21,20 @@ namespace nilnul.num.quotient.str
 				r += item;
 			}
 			return r;
-
 		}
+
+		static public quotient_.DenomNonnil Sum(this IEnumerable<num.quotient_.DenomNonnil> str)
+		{
+			var r = num.quotient_.DenomNonnil.Nil;
+
+			foreach (var item in str)
+			{
+				r += item;
+			}
+			return r;
+		}
+
+
 		static public Q1 Sum(nilnul.num.quotient.stream.Take take) {
 			Q1 r = new nilnul.num.Quotient();
 

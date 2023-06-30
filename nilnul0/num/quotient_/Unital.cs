@@ -10,6 +10,8 @@ namespace nilnul.num.quotient_
 	/// <summary>
 	/// <see cref="nameof(nilnul.num.Quotient1)"/>
 	/// </summary>
+	///
+	[Obsolete(nameof(IInversal))]
 	static public class _UnitalX
 	{
 		static public nilnul.num.Quotient1 Over(BigInteger x) {

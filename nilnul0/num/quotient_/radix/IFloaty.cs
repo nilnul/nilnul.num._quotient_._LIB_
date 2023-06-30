@@ -9,6 +9,7 @@
 	///					where "-2" is called float, or slack
 	/// So this is a radix with a float;
 	/// </summary>
+	/// <see cref="_radix.basic.indiced.ISignificed"/>
 	public interface IFloaty { }
 
 

@@ -19,5 +19,13 @@ namespace nilnul.num.quotient_.denomNonnil
 				_ => new quotient_.DenomNonnil(q.numerator,q.denominator)
 			};
 		}
+		static public double ToDbl(
+			this
+			nilnul.num.quotient_.DenomNonnilI q
+		) {
+			return (double)q.numerator / (double)q.denominator.eeByRef;
+		}
+
+
 	}
 }

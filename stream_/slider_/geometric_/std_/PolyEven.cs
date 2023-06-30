@@ -9,6 +9,9 @@ using Q1 = nilnul.num.Quotient1;//.fraction.op.Simplify.Ed1;
 
 namespace nilnul.num.quotient.stream_.slider_.geometric_.std_
 {
+	/// <summary>
+	/// x, x^3, x^5, ...
+	/// </summary>
 	public class PolyEven1 : stream_. slider_.geometric_.Std
 	{
 		public PolyEven1(Q1 x)

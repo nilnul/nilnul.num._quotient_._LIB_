@@ -8,7 +8,7 @@ namespace nilnul.num
 {
 
 	/// <summary>
-	/// 
+	/// <see cref="_quotient.Dividing"/>, but the divider is nonnil; (the dividend|numerator can be anything)
 	/// </summary>
 	/// alias:
 	///		dividing
@@ -18,7 +18,8 @@ namespace nilnul.num
 	///		quotient
 	///			eg: 20/3 and we get a quotient as "6 with remainder 2"
 	///		frac
-	///			numerator,denominator
+	///			numerator,denominator;
+	///			but quotient is closer to <see cref="_quotient.Dividing"/>
 	///		rational
 	///			coprime, divisor positive;
 	///			initial conflicts with real
@@ -27,10 +28,10 @@ namespace nilnul.num
 	///			not reduced;
 	///			in most contexts, both numbers are restricted to be positive.
 
-	public interface IQuotient
+	public interface IQuotient //:IFrac
+		:
+		_quotient.IDividing
 	{
-
-
 
 	}
 }

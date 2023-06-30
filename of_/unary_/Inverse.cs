@@ -41,7 +41,10 @@ namespace nilnul.num.quotient.of_.unary_
 		{
 			return new DenomNonnil(a.denominator,a.numerator);
 		}
-
+		public override string ToString()
+		{
+			return "~"; //whileas "-" is negated;
+		}
 		static public Inverse Singleton
 		{
 			get
